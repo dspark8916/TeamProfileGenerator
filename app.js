@@ -18,10 +18,60 @@ function appMenu() {
   function createManager() {
     console.log("Please build your team");
     inquirer.prompt([
-      //
-      // YOUR CODE HERE:
-      // CREATE OBJECTS OF QUESTIONS HERE FOR MANAGER
-      //
+      {
+      type: "input",
+      name: "managerName",
+      message: "What is your name?",
+      validate: managerName => {
+        const pass = /^[A-Za-z]+$/.test(managerName);
+        if (pass) {
+          return true;
+        } else {
+          console.log(" Incorrect characters. Please use only upper or lower case letters.")
+          return false;
+        }
+      }
+      },
+      {
+        type: "input",
+        name: "managerId",
+        message: "What is your employee ID?",
+        validate: managerId => {
+          const pass = /^[1-9]\d*S/.test(managerId);
+          if (pass) {
+            return true;
+          } else {
+            console.log(" Incorrect input. Please enter a valid Employee ID.")
+          }
+        }
+      },
+      {
+        type: "input",
+        name: "managerEmail",
+        message: "What is your email address?",
+        validate: managerEmail => {
+          const pass = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(managerEmail);
+          if (pass) {
+            return true;
+          } else {
+            console.log(" Invalid email address. Please enter a valid email address.")
+          }
+        }
+      },
+      {
+        type: "input",
+        name: "managerOfficeNumber",
+        message: "What is your offic phone number?",
+        validate: managerOfficeNumber => {
+          const pass = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(managerOfficeNumber);
+          if (pass) {
+            return true;
+          } else {
+            console.log(" Invalid input. Please enter a valid phone number.");
+            return false;
+          }
+        }
+      }
     ]).then(answers => {
       const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
       teamMembers.push(manager);
