@@ -27,7 +27,7 @@ function appMenu() {
         if (pass) {
           return true;
         } else {
-          console.log(" Incorrect characters. Please use only upper or lower case letters.")
+          console.log("Incorrect characters. Please use only upper or lower case letters.")
           return false;
         }
       }
@@ -41,7 +41,7 @@ function appMenu() {
           if (pass) {
             return true;
           } else {
-            console.log(" Incorrect input. Please enter a valid Employee ID.")
+            console.log("Incorrect input. Please enter a valid Employee ID.")
           }
         }
       },
@@ -54,7 +54,7 @@ function appMenu() {
           if (pass) {
             return true;
           } else {
-            console.log(" Invalid email address. Please enter a valid email address.")
+            console.log("Invalid email address. Please enter a valid email address.")
           }
         }
       },
@@ -67,7 +67,7 @@ function appMenu() {
           if (pass) {
             return true;
           } else {
-            console.log(" Invalid input. Please enter a valid phone number.");
+            console.log("Invalid input. Please enter a valid phone number.");
             return false;
           }
         }
@@ -118,13 +118,52 @@ function appMenu() {
           if (pass) {
             return true;
           } else {
-            console.log(" Invalid characters. Please use only upper and lower case letters.")
+            console.log("Invalid characters. Please use only upper and lower case letters.")
             return false;
           }
         }
       },
       {
-        
+        type: "input",
+        name: "engineerId",
+        message: "What is your employee ID?",
+        validate: engineerId => {
+          const pass = /^[1-9]\d*S/.test(engineerId);
+          if (pass) {
+            return true;
+          } else {
+            console.log("Invalid. This field can't be empty.");
+            return false;
+          }
+        }
+      },
+      {
+        type: "input";
+        name: "engineerEmail",
+        message: "What is your email address?",
+        validate: engineerEmail => {
+          const pass = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(engineerEmail);
+          if (pass) {
+            return true;
+          } else {
+            console.log("Invalid email. Please enter a valid email address.");
+            return false;
+          }
+        }
+      },
+      {
+        type: "input",
+        name: "engineerUsername",
+        message: "What is your GitHub username?",
+        validate: engineerUsername => {
+          const pass = /^[0-9a-zA-Z]+$/.test(engineerUsername);
+          if (pass) {
+            return true;
+          } else {
+            console.log("Invalid, please do not leave this field blank.");
+            return false;
+          }
+        }
       },
     ]).then(answers => {
       //
