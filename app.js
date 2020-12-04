@@ -118,7 +118,7 @@ function appMenu() {
           if (pass) {
             return true;
           } else {
-            console.log("Invalid characters. Please use only upper and lower case letters.")
+            console.log("Incorrect characters. Please use only upper or lower case letters.")
             return false;
           }
         }
@@ -178,19 +178,68 @@ function appMenu() {
 
   function addIntern() {
     inquirer.prompt([
-      //
-      // YOUR CODE HERE
-      // CREATE OBJECTS OF QUESTIONS FOR ENGINEER
-      //
+      {
+        type: "input",
+        name: "internName",
+        message: "What is your name?",
+        validate: internName => {
+          const pass = /^[A-Za-z]+$/.test(internName);
+          if (pass) {
+            return true;
+          } else {
+            console.log("Incorrect characters. Please use only upper or lower case letters.")
+            return false;
+          }
+        }
+      },
+      {
+        type: "input",
+        name: "internId",
+        message: "What is your employee ID?",
+        validate: internId => {
+          const pass = /^[1-9]\d*$/.test(internId);
+          if (pass) {
+            return true;
+          } else {
+            console.log("Invalid. This field can't be empty.");
+            return false;
+          }
+        }
+      },
+      {
+        type: "input",
+        name: "internEmail",
+        message: "What is your email address?",
+        validate: internEmail => {
+          const pass = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(internEmail);
+          if (pass) {
+            return true;
+          } else {
+            console.log("Invalid email. Please enter a valid email address.");
+            return false;
+          }
+        }
+      },
+      {
+        type: "input",
+        name: "internSchool",
+        message: "What university did you attend?",
+        validate: answer => {
+          if (answer !== "") {
+            return true;
+          } else {
+            console.log("Please enter valid input with at least one character");
+            return false;
+          }
+        }
+      },
     ]).then(answers => {
-      //
-      // YOUR CODE HERE
-      // 1. CREATE A VARIABLE TO STORE THE INTERN OBJECT INSTANTIATED WITH THE INTERN CLASS, PASSING ANSWERS PROPERTIES AS INPUT AURGUMENTS 
-      //    TO THE INTERN CLASS CONSTRUCTOR
-      // 2. ADD (PUSH) THE INTERN VARIABLE TO the teamMembers ARRAY
-      // 3. ADD (PUSH) THE INTERN ID TO THE idArray ARRAY
-      // 
+      const intern = new Intern(answers.internName, answer.internId, answers.internEmail, answers.internSchool);
 
+      teamMembers.push(intern);
+
+      idArray.push(answers.internId);
+      
       createTeam();
     });
   }
