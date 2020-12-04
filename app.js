@@ -109,10 +109,23 @@ function appMenu() {
 
   function addEngineer() {
     inquirer.prompt([
-      //
-      // YOUR CODE HERE
-      // CREATE OBJECTS OF QUESTIONS FOR ENGINEER
-      //
+      {
+        type: "input",
+        name: "engineerName",
+        message: "What is your name?",
+        validate: engineerName => {
+          const pass = /^[A-Za-z]+$/.test(engineerName);
+          if (pass) {
+            return true;
+          } else {
+            console.log(" Invalid characters. Please use only upper and lower case letters.")
+            return false;
+          }
+        }
+      },
+      {
+        
+      },
     ]).then(answers => {
       //
       // YOUR CODE HERE
