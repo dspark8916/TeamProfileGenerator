@@ -6,15 +6,29 @@
 
 ## Table of Contents
 
+* [Installation](#installation)
+
+* [Usage](#usage)
+
+* [Contributing](#Contributing)
+
+* [Video Demonstration](#demonstration)
+
+* [ScreenShots of Final Output](#screenshots)
+
+* [Tests](#tests)
+
+* [Questions](#questions)
+
 ## Installation
 
 ## Usage
 
 ## Contributing
 
-## Video Demonstration
+## Demonstration
 
-## ScreenShots of Final Output
+## ScreenShots
 
 ## Tests
 
