@@ -50,7 +50,7 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 
 **Link to Video Demo**
 
-[Video Demo]()
+[Video Demo](https://drive.google.com/file/d/1HKCRHYRx22mVINso9AT8aWkwLRUBq5Xi/view)
 
 ## ScreenShots
 
