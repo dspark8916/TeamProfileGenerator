@@ -195,7 +195,7 @@ function appMenu() {
       {
         type: "input",
         name: "internId",
-        message: "What is your employee ID?",
+        message: "What is their employee ID?",
         validate: internId => {
           const pass = /^[1-9]\d*$/.test(internId);
           if (pass) {

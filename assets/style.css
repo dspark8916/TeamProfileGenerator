@@ -1,0 +1,8 @@
+.card-columns{
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+}
