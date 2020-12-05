@@ -54,9 +54,13 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 
 ## ScreenShots
 
-![ScreenShot of Prompts]()
+![ScreenShot of Final Output](assets/images/FinalOutput.png)
 
-![ScreenShot of Final Output]()
+![ScreenShot of Prompts](assets/images/Prompt1.png)
+
+![ScreenShot of Prompts](assets/images/Prompt2.png)
+
+![ScreenShot of Prompts](assets/images/Prompt3.png)
 
 ## Contact
 If you have any questions regarding this project and would like to reach out to me please feel free to do so at the following email: dimitarm01@gmail.com. Thank you.
