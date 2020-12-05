@@ -2,39 +2,70 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>My Team</title>
-​  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/assets/style.css">
-  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Team</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c502137733.js"></script>
 </head>
 
 <body>
-​
-  <div class="container">
-​
-    <div class="jumbotron">
-      <h1 class="text-center"><span class="fa fa-fire"></span> Hot Restaurant</h1>
-      <hr>
-      <h2 class="text-center">We only have 5 tables! Book your seat before they all are gone!</h2>
-      <br>
-​
-      <div class="text-center">
-        <a href="/tables"><button class="btn btn-lg btn-primary"><span class="fa fa-list-alt"></span> View Tables</button></a>
-        <a href="/reserve"><button class="btn btn-lg btn-danger"><span class="fa fa-credit-card"></span> Make Reservation</button></a>
-      </div>
-​
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 jumbotron mb-3 team-heading">
+                <h1 class="text-center">My Team</h1>
+            </div>
+        </div>
     </div>
-​
-    <footer class="footer">
-      <div class="container">
-        <p><a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a>
-      </div>
-    </footer>
-​
-  </div>
-​
-​
+    <div class="container">
+        <div class="row">
+            <div class="team-area col-12 d-flex justify-content-center">
+                <div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title">Dimitar</h2>
+        <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>Manager</h3>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: 23</li>
+            <li class="list-group-item">Email: <a href="mailto:dimitar23@yahoo.com">dimitar23@yahoo.com</a></li>
+            <li class="list-group-item">Office number: 973-478-1577</li>
+        </ul>
+    </div>
+</div>
+<div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title">Scott</h2>
+        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>Engineer</h3>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: 56</li>
+            <li class="list-group-item">Email: <a href="mailto:scott56@yahoo.com">scott56@yahoo.com</a></li>
+            <li class="list-group-item">GitHub: <a href="https://github.com/scott56" target="_blank" rel="noopener noreferrer">scott56</a></li>
+        </ul>
+    </div>
+</div>
+<div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title">Boris</h2>
+        <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>Intern</h3>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: 78</li>
+            <li class="list-group-item">Email: <a href="mailto:boris78@yahoo.com">boris78@yahoo.com</a></li>
+            <li class="list-group-item">School: Rutgers</li>
+        </ul>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

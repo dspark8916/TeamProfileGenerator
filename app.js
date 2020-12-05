@@ -27,7 +27,7 @@ function appMenu() {
         if (pass) {
           return true;
         } else {
-          console.log("Incorrect characters. Please use only upper or lower case letters.")
+          console.log(" Incorrect characters. Please use only upper or lower case letters.")
           return false;
         }
       }
@@ -37,11 +37,11 @@ function appMenu() {
         name: "managerId",
         message: "What is your employee ID?",
         validate: managerId => {
-          const pass = /^[1-9]\d*S/.test(managerId);
+          const pass = /^[1-9]\d*$/.test(managerId);
           if (pass) {
             return true;
           } else {
-            console.log("Incorrect input. Please enter a valid Employee ID.")
+            console.log(" Incorrect input. Please enter a valid Employee ID.")
           }
         }
       },
@@ -54,20 +54,20 @@ function appMenu() {
           if (pass) {
             return true;
           } else {
-            console.log("Invalid email address. Please enter a valid email address.")
+            console.log(" Invalid email address. Please enter a valid email address.")
           }
         }
       },
       {
         type: "input",
         name: "managerOfficeNumber",
-        message: "What is your offic phone number?",
+        message: "What is your office phone number?",
         validate: managerOfficeNumber => {
           const pass = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(managerOfficeNumber);
           if (pass) {
             return true;
           } else {
-            console.log("Invalid input. Please enter a valid phone number.");
+            console.log(" Invalid input. Please enter a valid phone number.");
             return false;
           }
         }
@@ -86,11 +86,11 @@ function appMenu() {
       {
         type: "list",
         name: "memberChoice",
-        message: "Which type of team member would you like to add?",
+        message: "Would you like to add a team member? Please select from the following choices:",
         choices: [
           "Engineer",
           "Intern",
-          "I don't want to add any more team members"
+          "I don't want to add any more team members."
         ]
       }
     ]).then(userChoice => {
@@ -112,13 +112,13 @@ function appMenu() {
       {
         type: "input",
         name: "engineerName",
-        message: "What is your name?",
+        message: "What is their name?",
         validate: engineerName => {
           const pass = /^[A-Za-z]+$/.test(engineerName);
           if (pass) {
             return true;
           } else {
-            console.log("Incorrect characters. Please use only upper or lower case letters.")
+            console.log(" Incorrect characters. Please use only upper or lower case letters.")
             return false;
           }
         }
@@ -126,27 +126,27 @@ function appMenu() {
       {
         type: "input",
         name: "engineerId",
-        message: "What is your employee ID?",
+        message: "What is their employee ID?",
         validate: engineerId => {
-          const pass = /^[1-9]\d*S/.test(engineerId);
+          const pass = /^[1-9]\d*$/.test(engineerId);
           if (pass) {
             return true;
           } else {
-            console.log("Invalid. This field can't be empty.");
+            console.log(" Invalid entry. Please use only numbers.");
             return false;
           }
         }
       },
       {
-        type: "input";
+        type: "input",
         name: "engineerEmail",
-        message: "What is your email address?",
+        message: "What is their email address?",
         validate: engineerEmail => {
           const pass = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(engineerEmail);
           if (pass) {
             return true;
           } else {
-            console.log("Invalid email. Please enter a valid email address.");
+            console.log(" Invalid email. Please enter a valid email address.");
             return false;
           }
         }
@@ -154,13 +154,13 @@ function appMenu() {
       {
         type: "input",
         name: "engineerUsername",
-        message: "What is your GitHub username?",
+        message: "What is their GitHub username?",
         validate: engineerUsername => {
           const pass = /^[0-9a-zA-Z]+$/.test(engineerUsername);
           if (pass) {
             return true;
           } else {
-            console.log("Invalid, please do not leave this field blank.");
+            console.log(" Invalid entry. Please only use numbers and letters.");
             return false;
           }
         }
@@ -170,7 +170,7 @@ function appMenu() {
 
       teamMembers.push(engineer);
 
-      idArray.push(answer.engineerId);
+      idArray.push(answers.engineerId);
 
       createTeam();
     });
@@ -181,13 +181,13 @@ function appMenu() {
       {
         type: "input",
         name: "internName",
-        message: "What is your name?",
+        message: "What is their name?",
         validate: internName => {
           const pass = /^[A-Za-z]+$/.test(internName);
           if (pass) {
             return true;
           } else {
-            console.log("Incorrect characters. Please use only upper or lower case letters.")
+            console.log(" Incorrect characters. Please use only upper or lower case letters.")
             return false;
           }
         }
@@ -201,7 +201,7 @@ function appMenu() {
           if (pass) {
             return true;
           } else {
-            console.log("Invalid. This field can't be empty.");
+            console.log(" Invalid entry. Please only use numbers.");
             return false;
           }
         }
@@ -209,13 +209,13 @@ function appMenu() {
       {
         type: "input",
         name: "internEmail",
-        message: "What is your email address?",
+        message: "What is their email address?",
         validate: internEmail => {
           const pass = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(internEmail);
           if (pass) {
             return true;
           } else {
-            console.log("Invalid email. Please enter a valid email address.");
+            console.log(" Invalid email. Please enter a valid email address.");
             return false;
           }
         }
@@ -223,18 +223,18 @@ function appMenu() {
       {
         type: "input",
         name: "internSchool",
-        message: "What university did you attend?",
+        message: "What university did they attend?",
         validate: answer => {
           if (answer !== "") {
             return true;
           } else {
-            console.log("Please enter valid input with at least one character");
+            console.log(" Please enter a valid input with at least one character");
             return false;
           }
         }
       },
     ]).then(answers => {
-      const intern = new Intern(answers.internName, answer.internId, answers.internEmail, answers.internSchool);
+      const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
 
       teamMembers.push(intern);
 
