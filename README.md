@@ -26,7 +26,7 @@ so that I have quick access to emails and GitHub profiles
 
 * [Tests](#tests)
 
-* [Questions](#questions)
+* [Contact](#contact)
 
 ## Installation
 
@@ -36,7 +36,15 @@ The main usage of this application is to allow a manager to generate a webpage d
 
 ## Contributing
 
-If you are interested in contributing to this app please contact the owner of this repo via email.
+If you are interested in contributing to this app please contact the owner of this repo via email. If given approval please follow these steps:
+
+* Fork this repository.
+* Create a branch: git checkout -b <branch_name>.
+* Make your changes and commit them: git commit -m '<commit_message>'
+* Push to the original branch: git push origin <project_name>/<location>
+* Create the pull request.
+
+Alternatively see the GitHub documentation on [creating a pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 ## Demonstration
 
@@ -50,7 +58,7 @@ If you are interested in contributing to this app please contact the owner of th
 
 ## Tests
 
-## Questions
+## Contact
 If you have any questions regarding this project and would like to reach out to me please feel free to do so at the following email: dimitarm01@gmail.com. Thank you.
 
 Check Out My Github Page:
