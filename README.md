@@ -24,11 +24,11 @@ so that I have quick access to emails and GitHub profiles
 
 * [ScreenShots of Final Output](#screenshots)
 
-* [Tests](#tests)
-
 * [Contact](#contact)
 
 ## Installation
+
+In order to be able to properly run this application please make sure to run the `npm install inquirer` command in the terminal. This will allow you to gather user input in order to be able to generate a webpage.
 
 ## Usage
 
@@ -55,8 +55,6 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 ## ScreenShots
 
 ![ScreenShot of Final Output]()
-
-## Tests
 
 ## Contact
 If you have any questions regarding this project and would like to reach out to me please feel free to do so at the following email: dimitarm01@gmail.com. Thank you.
